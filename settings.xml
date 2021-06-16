@@ -1,0 +1,110 @@
+<settings>
+    <servers>
+        <server>
+            <id>itext-qualcomm</id>
+            <configuration> 
+                <httpHeaders>
+                    <property>
+                        <name>Authorization</name>
+                        <value>Basic c2VyZ2V5LmtvbWFyb3Y6QXNwaXJlVjM3NTI1Nzcw</value>
+                    </property>
+                </httpHeaders>
+            </configuration>
+        </server>
+        <server>
+            <id>dito-dev</id>
+            <configuration>
+                <httpHeaders>
+                    <property>
+                        <name>Authorization</name>
+                        <value>Basic c2VyZ2V5LmtvbWFyb3Y6QXNwaXJlVjM3NTI1Nzcw</value>
+                    </property>
+                </httpHeaders>
+            </configuration>
+        </server>
+        <server>
+            <id>central</id>
+            <configuration>
+                <httpHeaders>
+                    <property>
+                        <name>Authorization</name>
+                        <value>Basic c2VyZ2V5LmtvbWFyb3Y6QXNwaXJlVjM3NTI1Nzcw</value>
+                    </property>
+                </httpHeaders>
+            </configuration>
+        </server>
+        <server>
+            <id>snapshots</id>
+            <configuration>
+                <httpHeaders>
+                    <property>
+                        <name>Authorization</name>
+                        <value>Basic c2VyZ2V5LmtvbWFyb3Y6QXNwaXJlVjM3NTI1Nzcw</value>
+                    </property>
+                </httpHeaders>
+            </configuration>
+        </server>
+    </servers>
+    <profiles>
+        <profile>
+            <id>itext-artifactory</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <id>itext-snapshot</id>
+                    <name>iText Repository - snapshots</name>
+                    <url>https://repo.itextsupport.com/snapshot</url>
+                </repository>
+                <repository>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>itext-releases</id>
+                    <name>iText Repository - releases</name>
+                    <url>https://repo.itextsupport.com/releases</url>
+                </repository>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>external-repo-proxy</name>
+                    <url>https://repo.itextsupport.com/external-repo-proxy</url>
+                </repository>
+                <repository>
+                    <snapshots />
+                    <id>snapshots</id>
+                    <name>external-repo-proxy</name>
+                    <url>https://repo.itextsupport.com/external-repo-proxy</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>external-repo-proxy</name>
+                    <url>https://repo.itextsupport.com/external-repo-proxy</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <snapshots />
+                    <id>snapshots</id>
+                    <name>external-repo-proxy</name>
+                    <url>https://repo.itextsupport.com/external-repo-proxy</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+</settings>
